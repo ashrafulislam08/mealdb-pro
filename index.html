@@ -13,27 +13,73 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body class="px-5">
+  <body>
     <!-- Header -->
     <header class="">
       <!-- Navbar -->
-      <nav class="container-md mx-auto flex justify-between items-center py-5">
+      <nav class="container mx-auto flex justify-between items-center py-5">
         <!-- Logo -->
         <div>
           <img src="./images/Tasty_HUT.png" alt="" />
         </div>
         <!-- Nav Link -->
         <div>
-          <button class="btn btn-error">Sing Up</button>
+          <button class="btn btn-warning">Sing Up</button>
         </div>
       </nav>
       <!-- Navbar end -->
       <!-- Banner start -->
-      <section></section>
+      <section
+        id="banner"
+        class="w-full h-[90vh] flex items-center justify-center px-3"
+      >
+        <div class="text-center">
+          <h2 class="text-3xl lg:text-5xl font-bold text-white mb-2">
+            Taste Our Delicious <span class="block">Best Foods</span>
+          </h2>
+          <p class="text-white lg:w-9/12 mx-auto">
+            There are many variations of passages of Lorem Ipsum available, but
+            the majority have suffered alteration in some form, by injected
+            humou.
+          </p>
+
+          <div
+            class="bg-white w-96 mx-auto my-3 rounded-lg flex justify-between"
+          >
+            <input
+              class="px-5 py-2 outline-none rounded-lg"
+              type="text"
+              placeholder="Search any food"
+            />
+            <button class="btn btn-warning">Search</button>
+          </div>
+        </div>
+      </section>
       <!-- Banner end -->
     </header>
     <!-- Header end -->
-
+    <main class="my-10 container mx-auto">
+      <!-- Favorite Food Section -->
+      <section>
+        <h3 class="font-bold text-center text-2xl">Your Favourite Food</h3>
+        <div id="main-content" class="py-5">
+          <div class="flex items-center gap-2">
+            <div>
+              <img src="./images/card.png" alt="" />
+            </div>
+            <div>
+              <h3 class="font-bold mb-5">Chicken Handi</h3>
+              <p class="text-gray-400 mb-5">
+                There are many variations <br />
+                of passages of available, <br />
+                but the majority have suffered
+              </p>
+              <a href="" class="text-yellow-500">View Details</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <!-- scripts -->
     <script src="./js/index.js"></script>
   </body>
