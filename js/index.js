@@ -4,7 +4,8 @@ const loadMealData = async (search) => {
   const response = await fetch(url);
   const data = await response.json();
   console.log(data);
-  displayMeals(data.meals.slice(0, 6));
+
+  displayMeals(data.meals);
 };
 
 // get search value
@@ -17,7 +18,14 @@ const searchValue = () => {
 // Display Meals
 const displayMeals = (data) => {
   const mainContent = document.getElementById("main-content");
-  data.forEach((meal) => {
+  mainContent.innerHTML = "";
+  if (!data) {
+    mainContent.innerHTML = `
+        <h2 class="font-bold text-3xl text-center">404! Data not found</h2>
+    `;
+    return;
+  }
+  data.slice(0, 6).forEach((meal) => {
     const { strInstructions, strMeal, strMealThumb } = meal;
     const div = document.createElement("div");
     div.innerHTML = `
