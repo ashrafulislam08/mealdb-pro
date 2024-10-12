@@ -47,11 +47,14 @@
             class="bg-white w-96 mx-auto my-3 rounded-lg flex justify-between"
           >
             <input
+              id="searchInput"
               class="px-5 py-2 outline-none rounded-lg"
               type="text"
               placeholder="Search any food"
             />
-            <button class="btn btn-warning">Search</button>
+            <button onclick="searchValue()" class="btn btn-warning">
+              Search
+            </button>
           </div>
         </div>
       </section>
@@ -62,22 +65,10 @@
       <!-- Favorite Food Section -->
       <section>
         <h3 class="font-bold text-center text-2xl">Your Favourite Food</h3>
-        <div id="main-content" class="py-5">
-          <div class="flex items-center gap-2">
-            <div>
-              <img src="./images/card.png" alt="" />
-            </div>
-            <div>
-              <h3 class="font-bold mb-5">Chicken Handi</h3>
-              <p class="text-gray-400 mb-5">
-                There are many variations <br />
-                of passages of available, <br />
-                but the majority have suffered
-              </p>
-              <a href="" class="text-yellow-500">View Details</a>
-            </div>
-          </div>
-        </div>
+        <div
+          id="main-content"
+          class="py-5 grid grid-cols-1 md:grid-cols-2"
+        ></div>
       </section>
     </main>
     <!-- scripts -->
